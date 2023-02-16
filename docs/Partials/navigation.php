@@ -10,7 +10,7 @@ aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
 </button>
 
-<a class="navbar-brand active mr-4" href="../Pages/Home page.php">
+<a class="navbar-brand active mr-4" href="../Pages/Home.php">
 <span class="icon icon-pencil square navbar-brand-icon"></span>
 Project Suggestion Tool
 </a>
@@ -36,7 +36,8 @@ Project Suggestion Tool
 <span class="dashhead-toolbar-divider hidden-sm-down"></span>
 </div>
 
-<button class="btn btn-outline-primary mr-2" href="#">Sign up</button>
-<button class="btn btn-outline-primary" href="#">Login</button>
+<a href="../Pages/Signup.php" class="btn btn-outline-primary mr-2" role="button">Sign up</a>
+<a href="../Pages/Login.php" class="btn btn-outline-primary" role="button">Login</a>
+
 </div>
 </nav>

@@ -15,22 +15,26 @@
   <?php include('../Partials/newsletter.php') ?>
     <h1 id="intro">Sign up</h1>
     <hr class="hr mt-2" />
-    <form>
-      <div class="form-group">
-        <label for="exampleInputFirstName">First Name</label>
-        <input type="FirstName" class="form-control" id="exampleInputFirstName"/>
+    <form action="signup.inc.php" method="post">
+      <div class="signup-form">
+        <label for="name">Full Name</label>
+        <input type="text" class="form-control" name="name"/>
       </div>
       <div class="form-group">
-        <label for="exampleInputSecondName">Second Name</label>
-        <input type="SecondName" class="form-control" id="exampleInputSecondName"/>
+        <label for="exampleInputSecondName">Username</label>
+        <input type="text" class="form-control" name="uid" />
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1"/>
+        <input type="text" class="form-control" name="email"/>
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" />
+        <input type="password" name="pwd" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Repeat Password</label>
+        <input type="password" name="pwdrepeat" class="form-control" />
       </div>
       <button type="submit" class="btn btn-default">Sign Up</button>
     </div>
