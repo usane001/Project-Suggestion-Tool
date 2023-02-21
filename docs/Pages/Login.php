@@ -15,14 +15,14 @@
   <?php include('../Partials/newsletter.php') ?>
     <h1 id="intro">Login</h1>
     <hr class="hr mt-2" />
-    <form action="login.inc.php" method="post">
-      <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" />
+    <form action="includes/login.inc.php" method="post">
+      <div class="login-form">
+        <label for="exampleInputEmail1">Username/Email</label>
+        <input type="text" name="name" class="form-control"  />
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" />
+        <input type="password" name="pwd"class="form-control"  />
       </div>
       <button type="submit" class="btn btn-default">Sign In</button>
     </div>

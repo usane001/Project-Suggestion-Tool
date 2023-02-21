@@ -15,7 +15,7 @@
   <?php include('../Partials/newsletter.php') ?>
     <h1 id="intro">Sign up</h1>
     <hr class="hr mt-2" />
-    <form action="signup.inc.php" method="post">
+    <form action="../includes/signup.inc.php" method="post">
       <div class="signup-form">
         <label for="name">Full Name</label>
         <input type="text" class="form-control" name="name"/>
@@ -36,7 +36,7 @@
         <label for="exampleInputPassword1">Repeat Password</label>
         <input type="password" name="pwdrepeat" class="form-control" />
       </div>
-      <button type="submit" class="btn btn-default">Sign Up</button>
+      <button type="submit" name="submit" class="btn btn-default">Sign Up</button>
     </div>
     </form>
 
