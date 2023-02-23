@@ -15,8 +15,8 @@
   <?php include('../Partials/newsletter.php') ?>
     <h1 id="intro">Sign up</h1>
     <hr class="hr mt-2" />
-    <form action="../includes/signup.inc.php" method="post">
-      <div class="signup-form">
+    <form action="includes/signup.inc.php" method="post">
+      <div class="signup-form-form">
         <label for="name">Full Name</label>
         <input type="text" class="form-control" name="name"/>
       </div>
@@ -39,9 +39,33 @@
       <button type="submit" name="submit" class="btn btn-default">Sign Up</button>
     </div>
     </form>
-
+    <?php
+    // Error messages
+    if (isset($_GET["error"])) {
+      if ($_GET["error"] == "emptyinput") {
+        echo '<script>alert("You have ")</script>';
+      }
+      else if ($_GET["error"] == "invaliduid") {
+        echo "<p>Choose a proper username!</p>";
+      }
+      else if ($_GET["error"] == "invalidemail") {
+        echo "<p>use an Aston email!</p>";
+      }
+      else if ($_GET["error"] == "passwordsdontmatch") {
+        echo "<p>Passwords doesn't match!</p>";
+      }
+      else if ($_GET["error"] == "stmtfailed") {
+        echo "<p>Something went wrong!</p>";
+      }
+      else if ($_GET["error"] == "usernametaken") {
+        echo "<p>Username already taken!</p>";
+      }
+      else if ($_GET["error"] == "none") {
+        echo "<p>You have signed up!</p>";
+      }
+    }
+ ?>
 </div>
-
   </div>
   <?php include('../Partials/footer.php') ?>
   </body>
