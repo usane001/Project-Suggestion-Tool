@@ -1,3 +1,9 @@
+<?php
+session_start();
+include_once 'includes/functions.inc.php';
+?>
+
+
 <nav class="navbar navbar-toggleable-sm fixed-top navbar-inverse bg-inverse app-navbar">
 <button
 class="navbar-toggler navbar-toggler-right hidden-md-up"
@@ -9,6 +15,7 @@ aria-expanded="false"
 aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
 </button>
+
 
 <a class="navbar-brand active mr-4" href="../Pages/Home.php">
 <span class="icon icon-pencil square navbar-brand-icon"></span>
@@ -35,9 +42,22 @@ Project Suggestion Tool
 
 <span class="dashhead-toolbar-divider hidden-sm-down"></span>
 </div>
-
+<?php
+if (isset($_SESSION["userid"])) {
+?>
+    <i class="fa fa-fw fa-user mr-1"></i>
+    <a href="#"><?php echo $_SESSION["useruid"]; ?></div></a>
+    <a href="includes/logout.inc.php" class="btn btn-outline-primary ml-3" role="button">Logout</a>
+<?php
+}
+else {
+    
+?>
 <a href="../Pages/Signup.php" class="btn btn-outline-primary mr-2" role="button">Sign up</a>
 <a href="../Pages/Login.php" class="btn btn-outline-primary" role="button">Login</a>
+<?php
+}
+?>
 
 </div>
 </nav>
