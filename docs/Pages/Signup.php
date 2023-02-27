@@ -43,25 +43,25 @@
     // Error messages
     if (isset($_GET["error"])) {
       if ($_GET["error"] == "emptyinput") {
-        echo '<script>alert("You have ")</script>';
+        echo '<script>alert("Please enter your details ")</script>';
       }
       else if ($_GET["error"] == "invaliduid") {
-        echo "<p>Choose a proper username!</p>";
+        echo '<script>alert("Choose a proper username!")</script>';
       }
       else if ($_GET["error"] == "invalidemail") {
-        echo "<p>use an Aston email!</p>";
+        echo '<script>alert("use an Aston email!")</script>';
       }
       else if ($_GET["error"] == "passwordsdontmatch") {
-        echo "<p>Passwords doesn't match!</p>";
+        echo '<script>alert("Passwords does not match!")</script>';
       }
       else if ($_GET["error"] == "stmtfailed") {
-        echo "<p>Something went wrong!</p>";
+        echo '<script>alert("Something went wrong!")</script>';
       }
       else if ($_GET["error"] == "usernametaken") {
-        echo "<p>Username already taken!</p>";
+        echo '<script>alert("Username already taken!")</script>';
       }
       else if ($_GET["error"] == "none") {
-        echo "<p>You have signed up!</p>";
+        echo '<script>alert("You have signed up!")</script>';
       }
     }
  ?>
