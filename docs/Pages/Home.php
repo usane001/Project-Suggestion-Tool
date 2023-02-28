@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  
     <title>
       
         Project Suggestion Tool &middot; 
@@ -12,10 +13,18 @@
     <?php include('../Partials/header.php') ?>
   </head>
 
-
 <body class="with-top-navbar">
     <?php include('../Partials/navigation.php') ?>
     <?php include('../Partials/newsletter.php') ?>
+    <?php
+if (isset($_SESSION["useruid"])) {
+  echo '<div class="alert alert-success alert-dismissible fade show">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>Success!</strong> You have successfully logged in.
+  </div>
+';
+}
+?>
     <h2 class="dashhead-title">Introduction</h2>
     <a class="badge bg-primary text-decoration-none link-light mb-2">Home</a>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
