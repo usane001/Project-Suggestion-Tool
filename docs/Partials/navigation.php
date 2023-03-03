@@ -21,19 +21,19 @@ aria-label="Toggle navigation">
 <span class="icon icon-pencil square navbar-brand-icon"></span>
 Project Suggestion Tool
 </a>
-
 <div class="collapse navbar-collapse mr-auto" id="navbarResponsive">
 <ul class="nav navbar-nav">
 <li class="nav-item">
-<a class="nav-link" href="../order-history/index.php">Browse Project</a>
+<a class="nav-link" href="../Pages/BrowseCategory.php">Browse Category</a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="../fluid/index.php">Suggest a Project</a>
+<a class="nav-link" href="../Pages/SuggestProject.php">Suggest a Project</a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="../docs/index.php">Track Progress</a>
+<a class="nav-link" href="../Pages/TrackProgress.php">Track Progress</a>
 </li>
 </ul>
+
 
 <form class="form-inline hidden-sm-down ml-auto">
 <input class="form-control" type="text" data-action="grow" placeholder="Search">
