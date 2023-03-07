@@ -29,9 +29,6 @@ Project Suggestion Tool
 <li class="nav-item">
 <a class="nav-link" href="../Pages/SuggestProject.php">Suggest a Project</a>
 </li>
-<li class="nav-item">
-<a class="nav-link" href="../Pages/TrackProgress.php">Track Progress</a>
-</li>
 </ul>
 
 
