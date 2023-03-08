@@ -14,6 +14,10 @@
   .card {  
   color:#000000
 }
+.card-title {  
+  color:#000000
+}
+
 </style>
 
 <body class="with-top-navbar">
@@ -29,56 +33,66 @@
     <div class="row">
     <div class="col-md-4 col-lg-3 col-xl-4">
     <div class="card mb-4">
-      <img src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+      <img src="../assets/img/academic.jpg" alt="" class="card-img-top">
       <div class="card-body">
-        <h5 class="card-title">Sunset</h5>
+        <h5 class="card-title mt-2">Academic Projects</h5>
         <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
-       <a href="" class="btn btn-outline-success btn-sm">Read More</a>
-        <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
+       <a href="" class="btn btn-outline-primary btn-sm">See Projects</a>
+
       </div>
      </div>
     </div>
   <div class=" col-md-4 col-lg-3 col-xl-4">
   <div class="card mb-4">
-      <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+      <img src="../assets/img/art.jpg" alt="" class="card-img-top">
       <div class="card-body">
-        <h5 class="card-title">Sunset</h5>
+        <h5 class="card-title mt-2">Art</h5>
         <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
-       <a href="" class="btn btn-outline-success btn-sm">Read More</a>
-        <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
+       <a href="" class="btn btn-outline-primary btn-sm">See Projects</a>
+
       </div>
       </div>
     </div>
     <div class=" col-md-4 col-lg-3 col-xl-4">
     <div class="card mb-4">
-      <img src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+      <img src="../assets/img/gaming.png" alt="" class="card-img-top">
       <div class="card-body">
-        <h5 class="card-title">Sunset</h5>
+        <h5 class="card-title mt-2">Gaming</h5>
         <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
-       <a href="" class="btn btn-outline-success btn-sm">Read More</a>
-        <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
+       <a href="" class="btn btn-outline-primary btn-sm">See Projects</a>
+
       </div>
      </div>
     </div>
     <div class="col-md-4 col-lg-3 col-xl-4">
     <div class="card mb-4">
-      <img src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+      <img src="../assets/img/business.jpeg" alt="" class="card-img-top">
       <div class="card-body">
-        <h5 class="card-title">Sunset</h5>
+        <h5 class="card-title mt-2">Business</h5>
         <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
-       <a href="" class="btn btn-outline-success btn-sm">Read More</a>
-        <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
+       <a href="" class="btn btn-outline-primary btn-sm">See Projects</a>
+
       </div>
      </div>
     </div>
     <div class="col-md-4 col-lg-3 col-xl-4">
     <div class="card mb-4">
-      <img src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+      <img src="../assets/img/FYPP.jpg" alt="" class="card-img-top">
       <div class="card-body">
-        <h5 class="card-title">Sunset</h5>
+        <h5 class="card-title mt-2">Final Year projects</h5>
         <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
-       <a href="" class="btn btn-outline-success btn-sm">Read More</a>
-        <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
+       <a href="" class="btn btn-outline-primary btn-sm">See Projects</a>
+
+      </div>
+     </div>
+    </div>
+    <div class="col-md-4 col-lg-3 col-xl-4">
+    <div class="card mb-4">
+      <img src="../assets/img/other.jpg" alt="" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title mt-2">Other</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+       <a href="" class="btn btn-outline-primary btn-sm">See Projects</a>
       </div>
      </div>
     </div>
