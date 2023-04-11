@@ -51,7 +51,9 @@ session_start();
 									<div class="form-group" id="msg">
 									<div class="col-sm-8 col-sm-offset-8">
 									<button type="submit" class="btn btn-info">Login</button>
-									<a href="../sign_up.php" class="btn btn-info">Signup</a>
+									<a href="sign_up.php" class="btn btn-info">Signup</a>
+									</form>
+
 									</div>
 
 									<div class="col-sm-12">
@@ -62,8 +64,10 @@ session_start();
 								
 									
 								</form>
-					 </div>         	
-					        
+					 
+								
+								
+					 </div>
 				</div>
 			</div>
 		</div>

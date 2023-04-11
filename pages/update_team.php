@@ -1,5 +1,5 @@
 <?php include '../includes/db.php';
-$query = mysqli_query($conn,"SELECT *,concat(lastname,', ',firstname,' ',midname) as name FROM project_team left join employee on project_team.eid = employee.eid where tid = '".$_GET['id']."' ");
+$query = mysqli_query($conn,"SELECT *,concat(lastname,', ',firstname,' ') as name FROM project_team left join employee on project_team.eid = employee.eid where tid = '".$_GET['id']."' ");
 $row = mysqli_fetch_assoc($query);
 $id = $row['eid'];
 
@@ -17,7 +17,7 @@ $id = $row['eid'];
 			<select name="fid" id="" class="form-control chosen-select" data-placeholder="Select Employee">
 			<option value="<?php echo $row['eid'] ?>"><?php echo ucwords($row['name']) ?></option>
 				<?php
-				$fquery=mysqli_query($conn,"SELECT *,concat(lastname,', ',firstname,' ',midname) as name,employee.eid as id from employee where employee.eid NOT IN (SELECT  project_team.eid from project_team ) or eid not in (SELECT team_member.eid from team_member) ");
+				$fquery=mysqli_query($conn,"SELECT *,concat(lastname,', ',firstname,' ') as name,employee.eid as id from employee where employee.eid NOT IN (SELECT  project_team.eid from project_team ) or eid not in (SELECT team_member.eid from team_member) ");
 				while($frow = mysqli_fetch_assoc($fquery)){
 					$ecod = date("Y",strtotime($frow['date_added'])). $frow['ecode'];
 					if($id == $frow['id']){ echo '<option value="'.$frow['eid'].'" selected="">'.ucwords($frow['name']).'|'.$ecod.'</option>'; }else{
@@ -34,7 +34,7 @@ $id = $row['eid'];
 			<select name="mid" id="mid" class="form-control chosen-select" data-placeholder="Select Employee">
 			<option></option>
 				<?php
-				$mquery=mysqli_query($conn,"SELECT *,concat(lastname,', ',firstname,' ',midname) as name from employee where employee.eid NOT IN (SELECT  project_team.eid from project_team ) or eid not in (SELECT team_member.eid from team_member) ");
+				$mquery=mysqli_query($conn,"SELECT *,concat(lastname,', ',firstname,' ') as name from employee where employee.eid NOT IN (SELECT  project_team.eid from project_team ) or eid not in (SELECT team_member.eid from team_member) ");
 				while($mrow = mysqli_fetch_assoc($mquery)){
 					$ecodd = date("Y",strtotime($mrow['date_added'])). $mrow['ecode'];
 					echo '<option value="'.$mrow['eid'].'">'.ucwords($mrow['name']).'|'.$ecodd.'</option>';
@@ -57,7 +57,7 @@ $id = $row['eid'];
 			<tbody id="mem">
 			<?php
 
-			$query1 = mysqli_query($conn,"SELECT *,concat(lastname,', ',firstname,' ',midname) as name FROM team_member left join employee on team_member.eid = employee.eid where tid = '".$_GET['id']."' ");
+			$query1 = mysqli_query($conn,"SELECT *,concat(lastname,', ',firstname,' ') as name FROM team_member left join employee on team_member.eid = employee.eid where tid = '".$_GET['id']."' ");
 			while($row1 = mysqli_fetch_assoc($query1)){
 			$id1 = $row1['eid'];
 			$id2 = $row1['tm_id'];

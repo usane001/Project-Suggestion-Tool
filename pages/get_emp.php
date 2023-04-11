@@ -14,11 +14,11 @@
     include '../includes/db.php';
      $d = date('Y-m-d',strtotime('today'));
    if($_GET['tid'] == 'all'){ 
-      $query=  mysqli_query($conn, "SELECT *,CONCAT(lastname,', ',firstname,' ',midname) as name FROM employee  where io = '1' order by name ");
+      $query=  mysqli_query($conn, "SELECT *,CONCAT(lastname,', ',firstname,' ') as name FROM employee  where io = '1' order by name ");
         
        }else{
-        $query=  mysqli_query($conn, "SELECT *,CONCAT(lastname,', ',firstname,' ',midname) as name FROM team_member natural join employee where tid = '".$_GET['tid']."' order by name ");
-        $query4=  mysqli_query($conn, "SELECT *,CONCAT(lastname,', ',firstname,' ',midname) as name FROM project_team left join employee on project_team.eid=employee.eid where tid = '".$_GET['tid']."' ");
+        $query=  mysqli_query($conn, "SELECT *,CONCAT(lastname,', ',firstname,' ') as name FROM team_member natural join employee where tid = '".$_GET['tid']."' order by name ");
+        $query4=  mysqli_query($conn, "SELECT *,CONCAT(lastname,', ',firstname,' ') as name FROM project_team left join employee on project_team.eid=employee.eid where tid = '".$_GET['tid']."' ");
         $row4 = mysqli_fetch_assoc($query4);
          $id4 =$row4['eid']; ?>
          <tr>

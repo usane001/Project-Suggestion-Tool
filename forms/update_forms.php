@@ -105,10 +105,7 @@ if($action == 'employee'){
 	$id =$_POST['id'];
 	$fname =$_POST['fname'];
 	$lname =$_POST['lname'];
-	$mname =$_POST['mname'];
-	$address =$_POST['address'];
 	$gender =$_POST['gender'];
-	$bday =$_POST['bday'];
 	$cn =$_POST['cn'];
 	$position =$_POST['position'];
 	$status =$_POST['status'];
@@ -117,10 +114,7 @@ if($action == 'employee'){
 
 	$query = mysqli_query($conn,"UPDATE employee SET lastname = '$lname',
 													firstname = '$fname',
-													midname = '$mname',
-													bday = '$bday',
 													contact_no = '$cn',
-													address = '$address',
 													pid = '$position',
 													status = '$status',
 													gender = '$gender',
@@ -205,10 +199,10 @@ if($action == 'attendance'){
 		$$var =$value;
 	
 	if($task == 'out'){
-		$query2 = mysqli_query($conn,"UPDATE attendance set time_out = now() where eid ='$id' and date_today = '$d' ");
+		$query2 = mysqli_query($conn,"UPDATE attendance set time_out = now() where eid ='$id' and date_today = '$id' ");
 	}
-	if($task == 'odel'){
-		$query2 = mysqli_query($conn,"UPDATE attendance set time_out = '' where eid ='$id' and date_today = '$d' ");
+	if($task == 'model'){
+		$query2 = mysqli_query($conn,"UPDATE attendance set time_out = '' where eid ='$id' and date_today = '$id' ");
 	}
 
 	

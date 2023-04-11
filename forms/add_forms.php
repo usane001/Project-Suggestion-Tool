@@ -89,10 +89,7 @@ if($action == 'division'){
 if($action == 'employee'){
 	$fname =$_POST['fname'];
 	$lname =$_POST['lname'];
-	$mname =$_POST['mname'];
-	$address =$_POST['address'];
 	$gender =$_POST['gender'];
-	$bday =$_POST['bday'];
 	$cn =$_POST['cn'];
 	$position =$_POST['position'];
 	$status =$_POST['status'];
@@ -105,8 +102,8 @@ if($action == 'employee'){
 		$ecode = $e_row['ecode']+'1';
 	}else { $ecode = '1001';}
 
-	$query = mysqli_query($conn,"INSERT INTO employee (lastname,firstname,midname,bday,contact_no,address,pid,status,gender,ecode,e_pic,io,date_added)
-		VALUES('$lname','$fname','$mname','$bday','$cn','$address','$position','$status','$gender','$ecode','$file','1',NOW())");
+	$query = mysqli_query($conn,"INSERT INTO employee (lastname,firstname,contact_no,pid,status,gender,ecode,e_pic,io,date_added)
+		VALUES('$lname','$fname','$cn','$position','$status','$gender','$ecode','$file','1',NOW())");
 	$last_id = mysqli_insert_id($conn);
 	if($query){
 		echo '<script>$("#suc_msg").show("slidedown");

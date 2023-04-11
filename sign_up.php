@@ -1,4 +1,34 @@
+<?php
+session_start();
+ include 'includes/header2.php'; 
+ if(isset($_SESSION['UID']))
+ header('location:pages/index.php');
+ ?>
+<style>
+	#title1 {
+		display: block;
+		width:50%;
+		height:90px;
+		background-color: white;
+		padding:1px;
+		border-radius:5px;
+		position:fixed;
+		top:30%;
+		z-index: 1000px;
+	}
+	#main-bod{
+		    background: url(images/background.jpg);
+		    background-repeat: no-repeat;
+			background-size: cover;
+			display:flex;
+			height:calc(100%);
+			width:calc(100%);
+			align-items:center;
+			justify-content:center;
+			top: 0;
+			margin:unset
 
+	}
 </style>
 <body id="main-bod">
 		<div class="col-lg-4">
@@ -20,7 +50,7 @@
 									</div>
 									<div class="form-group" id="msg">
 									<div class="col-sm-8 col-sm-offset-8">
-									<button type="submit" href="../Pages/index.php?page=index" class="btn btn-info">Login</button>
+									<a href="index.php" class="btn btn-info">Login</a>
 									<button type="submit" class="btn btn-info">Signup</button> <br>
 									</div>
 

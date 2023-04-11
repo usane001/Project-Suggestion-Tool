@@ -10,17 +10,9 @@
 <?php
 include '../includes/db.php';
 $id = $_GET['id'];
-$emp_query = mysqli_query($conn,"SELECT *,CONCAT(lastname,', ',firstname,' ',midname) as name from employee natural join position  where eid= '$id'");
+$emp_query = mysqli_query($conn,"SELECT *,CONCAT(lastname,', ',firstname,' ') as name from employee natural join position  where eid= '$id'");
 $row= mysqli_fetch_assoc($emp_query);
-$d1 = date("Y",strtotime($row['bday']));
 $d2 = date("Y");
-
-if(date("md",strtotime($row['bday'])) > date('md') ){
-	$age = ($d2 - $d1)-1;
-}else{
-	$age = $d2 - $d1;
-}
-
  ?>
 </div>
 
@@ -38,19 +30,6 @@ if(date("md",strtotime($row['bday'])) > date('md') ){
 	<div class="row">
 		<div class="col-sm-4 text-right"><label class="control-label">Name:</label></div>
 		<div class="col-sm-8 text-left"><label class="control-label"><?php echo $row['name'] ?></label></div>
-	</div>
-	<div class="row">
-		<div class="col-sm-4 text-right"><label class="control-label">Birthday:</label></div>
-		<div class="col-sm-8 text-left"><label class="control-label"><?php echo date("F d, Y",strtotime($row['bday'])) ?></label></div>
-	</div>
-	<div class="row">
-		<div class="col-sm-4 text-right"><label class="control-label">Age:</label></div>
-		<div class="col-sm-8 text-left"><label class="control-label"><?php echo $age ?></label></div>
-	</div>
-	
-	<div class="row">
-		<div class="col-sm-4 text-right"><label class="control-label">Address:</label></div>
-		<div class="col-sm-8 text-left"><label class="control-label"><?php echo $row['address'] ?></label></div>
 	</div>
 	
 	<div class="row">

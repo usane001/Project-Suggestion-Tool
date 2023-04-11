@@ -12,7 +12,7 @@
 		background:#008aff8c;
 	}
 </style>
-<div class="col-lg-12" id="project-field">
+<div class="col-lg-16" id="project-field">
 	<div class="panel panel-primary">
 		<div class="panel-body">
 			<?php include '../includes/db.php';
@@ -32,11 +32,11 @@
 <div class="col-lg-4" id="notif">
 	<div id="" style="">
 		
-		<?php include '../includes/db.php';
+		<!-- <?php include '../includes/db.php';
 		
-		$query1 = mysqli_query($conn,"SELECT * FROM projects where io = '1' ");
+		 $query1 = mysqli_query($conn,"SELECT * FROM projects where io = '1' ");
 
-		while($row1 = mysqli_fetch_assoc($query1)){
+		 while($row1 = mysqli_fetch_assoc($query1)){
 			$d1= date("Ymd",strtotime($row1['deadline'].' -15 days'));
 			$d2= date("Ymd");
 			 
@@ -64,9 +64,9 @@
 						<p><i>Overdue since:</i><b><?php echo date("F d, Y",strtotime($row1['deadline'])) ?></b></p>
 					</div>
 				</div>
-			<?php }} ?>
+			<?php }} ?> 
 	</div>
-</div>
+</div> -->
 <script>
 	if($('#notif .panel').length > 0){
 		$('#project-field').removeClass('col-lg-12').addClass("col-md-8")

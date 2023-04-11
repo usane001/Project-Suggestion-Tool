@@ -13,12 +13,12 @@
 	<tbody>
 		<?php
 		include "../includes/db.php";
-		$query = mysqli_query($conn,"SELECT *,Concat(firstname,', ',lastname,' ',midname) as name FROM  project_team left join employee on project_team.eid = employee.eid ");
+		$query = mysqli_query($conn,"SELECT *,Concat(firstname,', ',lastname,' ') as name FROM  project_team left join employee on project_team.eid = employee.eid ");
 		while($row= mysqli_fetch_assoc($query)){ ?>
 			<tr>
 				<td><?php echo ucwords($row['name']) ?></td>
 				<td>
-					<?php $query2 = mysqli_query($conn,"SELECT *,Concat(firstname,', ',lastname,' ',midname) as name FROM  team_member left join employee on team_member.eid = employee.eid where tid = '".$row['tid']."' ");
+					<?php $query2 = mysqli_query($conn,"SELECT *,Concat(firstname,', ',lastname,' ') as name FROM  team_member left join employee on team_member.eid = employee.eid where tid = '".$row['tid']."' ");
 		while($row2= mysqli_fetch_assoc($query2)){ ?>
 			- <?php echo ucwords($row2['name']). "<br>"; ?>
 		<?php } ?>

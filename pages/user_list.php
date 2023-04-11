@@ -27,7 +27,7 @@
     <?php
     include '../includes/db.php';
    
-      $query=  mysqli_query($conn, "SELECT *,CONCAT(lastname,', ',firstname,' ',midname) as name FROM users left join employee on users.eid=employee.eid where users.io = '".$_GET['io']."' and users.eid != '".$_SESSION['ID']."' ");
+      $query=  mysqli_query($conn, "SELECT *,CONCAT(lastname,', ',firstname,' ') as name FROM users left join employee on users.eid=employee.eid where users.io = '".$_GET['io']."' and users.eid != '".$_SESSION['ID']."' ");
          while($row = mysqli_fetch_assoc($query)) {   
          $id =$row['eid']; 
          $id2 =$row['uid']; 
@@ -66,7 +66,7 @@
       <?php
     include '../includes/db.php';
    
-      $query2=  mysqli_query($conn, "SELECT *,CONCAT(lastname,', ',firstname,' ',midname) as name FROM employee where io = '1' and eid != '".$_SESSION['ID']."' order by name ");
+      $query2=  mysqli_query($conn, "SELECT *,CONCAT(lastname,', ',firstname,' ') as name FROM employee where io = '1' and eid != '".$_SESSION['ID']."' order by name ");
          while($row2 = mysqli_fetch_assoc($query2)) {  
     ?>
       <option value="<?php echo $row2['eid'] ?>"><?php echo date("Y",strtotime($row2['date_added'])).$row2['ecode']. ' | ' . ucwords($row2['name']) ?></option> 

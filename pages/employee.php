@@ -29,11 +29,10 @@
     <?php
     include '../includes/db.php';
    
-      $query=  mysqli_query($conn, "SELECT *,CONCAT(lastname,', ',firstname,' ',midname) as name FROM employee natural join position where io = '".$_GET['io']."' and eid != 1 order by name ");
+      $query=  mysqli_query($conn, "SELECT *,CONCAT(lastname,', ',firstname) as name FROM employee natural join position where io = '".$_GET['io']."' and eid != 1 order by name ");
          while($row = mysqli_fetch_assoc($query)) {   
          $id =$row['eid']; 
          $eco= date("Y",strtotime($row['date_added'])).$row['ecode'];
-
     ?>
       <tr>
 

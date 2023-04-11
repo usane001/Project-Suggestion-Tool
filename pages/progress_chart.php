@@ -24,7 +24,7 @@ $row_prog = $prog3->fetch_assoc();
 
         if($row_prog['total_prog'] <= 50){
             $color='rgba(251, 159, 118, 0.53)';
-            }elseif ($count > 50  ) {
+            }elseif ('count' > 50  ) {
               $color='rgba(120, 151, 239, 0.53)';  
             }
 			$array[$id][] ='{"progress":'.'"'.$row_prog['total_prog'].'"'.','.'"name":"'. ucfirst($name).'"'.','.'"color":"'. $color.'"}';

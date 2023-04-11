@@ -42,20 +42,6 @@
         </div> 
 
       <div class="form-group" id="form-login">
-          <label class="col-sm-4 control-label">Middle Name:</label>
-          <div class="col-sm-8">
-            <input class="form-control" style="text-transform:capitalize" id="" name="mname" type="text" >
-          </div>
-        </div>
-
-      <div class="form-group" id="form-login">
-          <label class="col-sm-4 control-label">Birthday:</label>
-          <div class="col-sm-8">
-            <input class="form-control"  id="" name="bday" type="date"  required>
-          </div>
-        </div>
-
-      <div class="form-group" id="form-login">
           <label class="col-sm-4 control-label">Gender:</label>
           <div class="col-sm-4">
             <select class="form-control"  name="gender" type="text"  required>
@@ -63,13 +49,6 @@
             <option>Female</option>
             <option>Male</option>
             </select>
-          </div>
-        </div>
-
-        <div class="form-group" id="form-login">
-          <label class="col-sm-4 control-label">Address:</label>
-          <div class="col-sm-8">
-            <textarea class="form-control" rows="2"  id="" name="address" type="text"  required></textarea> 
           </div>
         </div>
         
@@ -205,7 +184,7 @@
             <option></option>
             <?php
             include '../includes/db.php';
-              $pos_query = mysqli_query($conn,"SELECT *,Concat(lastname,', ',firstname,' ',midname) as name FROM project_team left join employee on project_team.eid = employee.eid where pio='1' order by name ASC");
+              $pos_query = mysqli_query($conn,"SELECT *,Concat(lastname,', ',firstname,' ') as name FROM project_team left join employee on project_team.eid = employee.eid where pio='1' order by name ASC");
               while($pos_row = mysqli_fetch_assoc($pos_query)){
              ?>
             <option style="text-transform:capitalize" value="<?php echo $pos_row['tid'] ?>"><?php echo $pos_row['name'] ?></option>

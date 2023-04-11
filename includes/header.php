@@ -43,14 +43,13 @@
     <script src="../datatables/dataTables.bootstrap.js"></script>
     <link href="../datatables/dataTables.bootstrap.css" rel="stylesheet">
 
-    
+
     <script src="../asset/js/bootstrap.min.js" type="text/javascript"></script>
 
-    <script src="../assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="../assets/js/ie-emulation-modes-warning.js"></script> 
 
     <script src="../chosen/chosen.jquery.js"></script>
   <link href="../chosen/chosen.css" rel="stylesheet" media="screen">
   <link href="../asset/css/style.scss" rel="stylesheet">
-
 
 </head>

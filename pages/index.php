@@ -88,7 +88,7 @@ if (!empty($page)) {
   <?php
     include '../includes/db.php';
    
-      $query2=  mysqli_query($conn, "SELECT *,CONCAT(lastname,', ',firstname,' ',midname) as name,users.io as status FROM users natural join employee where uid = '".$_SESSION['UID']."' ");
+      $query2=  mysqli_query($conn, "SELECT *,CONCAT(lastname,', ',firstname,' ') as name,users.io as status FROM users natural join employee where uid = '".$_SESSION['UID']."' ");
        $row2 = mysqli_fetch_assoc($query2);  
     ?>
   <div id="retCode1"><div class="alert alert-success" id="msg20"><i class="fa fa-check"></i> Data successfully updated. </div></div>
@@ -244,7 +244,7 @@ if (!empty($page)) {
             <select class="form-control" style="text-transform:capitalize" id="reid" required>
             <option selected="" disabled=""></option>
            <?php
-            $pp = mysqli_query($conn,"SELECT *,CONCAT(lastname,', ',firstname,' ',midname) as name FROM employee natural join position where position = 'foreman' ");
+            $pp = mysqli_query($conn,"SELECT *,CONCAT(lastname,', ',firstname,' ') as name FROM employee natural join position where position = 'foreman' ");
             while($pp_row=mysqli_fetch_assoc($pp)){
             ?>
             <option value="<?php echo $pp_row['eid'] ?>"><?php echo ucwords($pp_row['name']) ?></option>
