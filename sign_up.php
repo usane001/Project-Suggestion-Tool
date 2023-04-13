@@ -41,25 +41,65 @@ session_start();
 					 <div class="container-fluid">
 					 <form class="form-horizontal" method="POST" id="sign_up_form">
 									<div class="form-group" id="form-sign_up">
-										<label for="" class="control-label">Fanta</label>
-										<input class="form-control" id="user" name="user" type="text">
-									</div>
-									<div class="form-group">
-										<label for="" class="control-label">Password</label>
-										<input type="password" name="pass" id="pass" class="form-control">
-									</div>
-									<div class="form-group" id="msg">
-									<div class="col-sm-8 col-sm-offset-8">
-									<a href="index.php" class="btn btn-info">Login</a>
-									<button type="submit" class="btn btn-info">Signup</button> <br>
-									</div>
+									<div class="form-group" id="form-login">
+          <label class="col-sm-4 control-label">Last Name:</label>
+          <div class="col-sm-8">
+            <input class="form-control" style="text-transform:capitalize" id="" name="lname" type="text"  required>
+          </div>
+        </div>
+   
+      <div class="form-group" id="form-login">
+          <label class="col-sm-4 control-label">First Name:</label>
+          <div class="col-sm-8">
+            <input class="form-control" style="text-transform:capitalize" id="" name="fname" type="text"  required>
+          </div>
+        </div> 
 
-									<div class="col-sm-12">
-										<div class="alert alert-success" id="correct"> Successfully Log in!</div>
-										<div class="alert alert-danger" id="error"> Error Log in </div>
-									</div>
-									</div>
-								
+      <div class="form-group" id="form-login">
+          <label class="col-sm-4 control-label">Gender:</label>
+          <div class="col-sm-4">
+            <select class="form-control"  name="gender" type="text"  required>
+            <option></option>
+            <option>Female</option>
+            <option>Male</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-group" id="form-login">
+          <label class="col-sm-4 control-label">Contact no.:</label>
+          <div class="col-sm-5">
+            <input class="form-control text-right"  id="" name="cn" type="text" maxlength="11"  required>
+          </div>
+        </div>
+
+        <div class="form-group" id="form-login">
+          <label class="col-sm-4 control-label">Status:</label>
+          <div class="col-sm-8">
+            <select class="form-control"  id="" name="status" type="text"  required>
+            <option></option>
+            <option>Single</option>
+            <option>Married</option>
+            <option>Widow</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group" id="form-login">
+          <label class="col-sm-4 control-label">Position:</label>
+          <div class="col-sm-8">
+            <select class="form-control"  id="" name="position" type="text"  required>
+            <option></option>
+            <?php
+            include '../includes/db.php';
+              $pos_query = mysqli_query($conn,"SELECT * FROM position order by position ASC");
+              while($pos_row = mysqli_fetch_assoc($pos_query)){
+             ?>
+            <option style="text-transform:capitalize" value="<?php echo $pos_row['pid'] ?>"><?php echo $pos_row['position'] ?></option>
+            <?php } ?>
+            </select>
+          </div>
+        </div>
 									
 								</form>
 					 </div>         	

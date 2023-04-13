@@ -24,13 +24,7 @@
           </div>
         </div>
 
-        <div class="form-group" id="form-login">
-          <label class="col-sm-4 control-label">Daily Rate</label>
-          <div class="col-sm-8">
-
-            <input class="form-control" style="text-align:right" id="" name="dr" type="number" value="<?php echo $row['daily_rate'] ?>" required>
-          </div>
-        </div>
+        
 
     </div>
    </div>
@@ -342,16 +336,25 @@
            <select type="text" class="form-control input-sm" style="text-transform:capitalize" autocomplete="off" name="p_type" id="p_type" onchange="div_field()" required/>
           <option id="p_typ" value="<?php echo $prow['proposed_project'] ?>" >
             <?php if($prow['proposed_project'] == '1'){
-              echo 'Building';
+              echo 'Art';
               }elseif ($prow['proposed_project'] == '2') {
-                echo 'House';
+                echo 'Gaming';
               }elseif ($prow['proposed_project'] == '3') {
-                echo 'Highways';
+                echo 'Business';
+              }elseif ($prow['proposed_project'] == '4') {
+                echo 'Academic';
+              }elseif ($prow['proposed_project'] == '5') {
+                echo 'FYP';
+              }elseif ($prow['proposed_project'] == '6') {
+                echo 'Other';
               } ?>
           </option>
-          <option value="1">Building</option>
-          <option value="2">House</option>
-          <option value="3">Highways</option>
+          <option value="0">Art</option>
+          <option value="1">Gaming</option>
+          <option value="2">Business</option>
+          <option value="3">Academic</option>
+          <option value="4">FYP</option>
+          <option value="5">Other</option>
           </select>
           </div>
         </div>
@@ -359,20 +362,6 @@
           <label class="col-sm-4 control-label">Project Name:</label>
           <div class="col-sm-8">
             <input class="form-control" style="text-transform:capitalize" id="" name="pname" type="text" value="<?php echo $prow['project'] ?>"  required>
-          </div>
-        </div>
-   
-      <div class="form-group" id="form-login">
-          <label class="col-sm-4 control-label">Location:</label>
-          <div class="col-sm-8">
-            <textarea class="form-control" style="text-transform:capitalize" id="" name="location" type="text"   required><?php echo $prow['location'] ?></textarea>
-          </div>
-        </div> 
-
-      <div class="form-group" id="form-login">
-          <label class="col-sm-4 control-label">Cost:</label>
-          <div class="col-sm-6">
-            <input class="form-control" style="text-align:right" id="cc" name="cost" type="text" placeholder="Php." value="<?php echo $prow['overall_cost'] ?>">
           </div>
         </div>
 
@@ -405,6 +394,13 @@
             </select>
           </div>
         </div>
+
+        <div class="form-group" id="form-login">
+          <label class="col-sm-4 control-label">Information:</label>
+          <div class="col-sm-8">
+            <textarea class="form-control" style="text-transform:capitalize" id="" name="information" type="text"   required><?php echo $prow['information'] ?></textarea>
+          </div>
+        </div> 
 
           <div class="form-group" id="form-login">
           <label class="col-sm-4 control-label">Status:</label>

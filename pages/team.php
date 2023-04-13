@@ -20,7 +20,7 @@
 				<td>
 					<?php $query2 = mysqli_query($conn,"SELECT *,Concat(firstname,', ',lastname,' ') as name FROM  team_member left join employee on team_member.eid = employee.eid where tid = '".$row['tid']."' ");
 		while($row2= mysqli_fetch_assoc($query2)){ ?>
-			- <?php echo ucwords($row2['name']). "<br>"; ?>
+			- <?php echo ucwords ($row2['name']). "<br>"; ?>
 		<?php } ?>
 				</td>
 				<td><center>

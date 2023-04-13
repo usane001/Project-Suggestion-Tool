@@ -20,7 +20,7 @@
                         <a id="dem3" href="javascript:;" data-toggle="collapse" data-target="#demo3"><i class="fa fa-fw fa-gears"></i> Maintenance       <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo3" class="collapse">
                         
-                             <li>
+                           <li>
                                 <a href="index.php?page=position"><i class="fa fa-fw fa-file-o"></i>Position</a>
                             </li>
                              <li>

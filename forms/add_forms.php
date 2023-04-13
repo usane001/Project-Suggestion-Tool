@@ -21,10 +21,10 @@ if($action == 'user'){
 if($action == 'position'){
 
 	$pos = $_POST['position'];
-	$dr = $_POST['dr'];
+	
 
 	
-	if($query = mysqli_query($conn,"INSERT INTO position (position,daily_rate)VALUES('$pos','$dr')")){
+	if($query = mysqli_query($conn,"INSERT INTO position (position)VALUES('$pos')")){
 		include '../includes/msg_box.php';
 	}else{
 		echo "<script>alert('Saving data failed!.')</script>";
@@ -117,16 +117,15 @@ if($action == 'employee'){
 }
 if($action == 'project'){
 	$pname =$_POST['pname'];
-	$location =$_POST['location'];
-	$cost =$_POST['cost'];
 	$deadline =$_POST['deadline'];
 	$sdate =$_POST['sdate'];
 	$tid =$_POST['tid'];
 	$p_type =$_POST['p_type'];
 	$file = "no_image.jpg";
+	$information =$_POST['information'];
 		
-	$query = mysqli_query($conn,"INSERT INTO projects (project,location,overall_cost,start_date,deadline,site_pic,tid,date_added,io,proposed_project)
-		VALUES('$pname','$location','$cost','$sdate','$deadline','$file','$tid',now(),'1','$p_type')");
+	$query = mysqli_query($conn,"INSERT INTO projects (project,start_date,deadline,site_pic,tid,date_added,io,proposed_project,information)
+		VALUES('$pname','$sdate','$deadline','$file','$tid',now(),'1','$p_type','$information')");
 	$last_id = mysqli_insert_id($conn);
 	if(isset($_POST['divs'])){
 

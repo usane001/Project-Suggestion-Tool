@@ -15,7 +15,6 @@
     <thead>
       <tr id="heads">
         <th class="col-md-2 text-center">Position</th>
-        <th class="col-md-2 text-center">Daily Rate</th>
         <th class="col-md-1 text-center"></th>
       </tr>
     </thead>
@@ -33,7 +32,6 @@
 
 
         <td style="text-transform:capitalize" class="text-center"><?php echo $row['position'] ?></td>
-        <td style="text-transform:capitalize" class="text-center"><?php echo $row['daily_rate'].' Php.' ?></td>
         <td style="text-transform:capitalize" class="text-center"><center><a href="#pos<?php echo $id ?>" data-toggle="modal"><i class="fa fa-pencil"></i> edit</a></center></td>
        </tr>
 
@@ -64,14 +62,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="form-horizontal">
-			<div class="form-group">
-			<div class="col-sm-4"><label class="control-label" for="dr">Daily Rate:</label></div>
-				<div class="col-sm-5">
-					<input type="number" style="text-align:right" class="form-control input-sm" name="dr" id="dr" placeholder="Php." required/>
-				</div>
-			</div>
-		</div>	
+		
 		<hr style="border-bottom:1px solid grey"></hr>
 
 		<div class="form-horizontal">

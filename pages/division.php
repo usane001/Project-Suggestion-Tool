@@ -38,15 +38,17 @@
         <td style="text-transform:capitalize" class="text-center"><?php echo $row['division'] ?><input type="hidden" id="div<?php echo $id ?>" value="<?php echo $row['division'] ?>"></td>
         <td style="text-transform:capitalize" class="text-center"><?php 
         if($row['project_type'] == '1'){
-        	echo 'House/Building';
-        } elseif($row['project_type'] == '3'){
-        	echo 'Highways';
-        }elseif($row['project_type'] == '0'){
-        	echo 'All';
+        	echo 'Art';
+        } elseif($row['project_type'] == '2'){
+        	echo 'Gaming';
+        }elseif($row['project_type'] == '3'){
+        	echo 'Business';
         }elseif($row['project_type'] == '4'){
-        	echo 'Grand Stand';
+        	echo 'Academic';
         }elseif($row['project_type'] == '5'){
-        	echo 'Covered Court';
+        	echo 'FYP';
+        }elseif($row['project_type'] == '6'){
+		echo 'Other';
         }
          ?><input type="hidden" id="typ<?php echo $id ?>" value="<?php echo $row['project_type'] ?>"></td>
         <td style="text-transform:capitalize" class="text-center"><center><a onclick="update_div(<?php echo $id ?>)"><i class="fa fa-pencil"></i> edit</a></center></td>
@@ -79,10 +81,14 @@
 				<div class="col-sm-7">
 					<select type="text" class="form-control input-sm" style="text-transform:capitalize" autocomplete="off" name="p_type" id="pos" required/>
 					<option id="p_typ"></option>
-					<option value="1">House/Building</option>
-					<option value="3">Highways</option>
-					<option value="4">Grand Stand</option>
-					<option value="5">Covered Court</option>
+					<option value="1">Art</option>
+					<option value="2">Gaming</option>
+					<option value="3">Business</option>
+					<option value="4">Academic</option>
+					<option value="5">FYP</option>
+					<option value="6">Other</option>
+
+
 					</select>
 				</div>
 			</div>
@@ -156,11 +162,9 @@
 		var typ = $('#typ'+i).val();
 		$('#pos').val(div);
 		$('#p_typ').val(typ);
-		if(typ == '1'){
-			$('#p_typ').html('House/Building');
-		}else if(typ == '2'){
-			$('#p_typ').html('Highways');
-		}else if(typ == '3'){
+		if(typ == '0'){
+			$('#p_typ').html('');
+		}else if(typ == '1'){
 			$('#p_typ').html('All');
 		}
 		$('#id').val(i);

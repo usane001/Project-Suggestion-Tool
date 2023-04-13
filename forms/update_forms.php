@@ -53,8 +53,7 @@ if($action == 'user2'){
 if($action == 'position'){
 	$id= $_POST['id'];
 	$pos= $_POST['pos'];
-	$dr= $_POST['dr'];
-	if(mysqli_query($conn,"UPDATE position SET daily_rate = '$dr' , position = '$pos' where pid = '$id'")){
+	if(mysqli_query($conn,"UPDATE position SET position = '$pos' where pid = '$id'")){
 		echo '<h4 class="alert alert-success"><i class="fa fa-fw fa-check"></i>  Data Succesfully Updated.</h4>';
 	}else{
 		echo "<script>alert('Updating data failed!.')</script>";
@@ -134,22 +133,21 @@ if($action == 'employee'){
 if($action == 'project'){
 	$id =$_POST['id'];
 	$pname =$_POST['pname'];
-	$location =$_POST['location'];
-	$cost =$_POST['cost'];
 	$deadline =$_POST['deadline'];
 	$sdate =$_POST['sdate'];
 	$tid =$_POST['tid'];
 	$p_type =$_POST['p_type'];
 	$stats =$_POST['stats'];
+	$information =$_POST['information'];
 		
 	$query = mysqli_query($conn,"UPDATE projects SET project = '$pname',
-													location = '$location',
-													overall_cost = '$cost',
 													deadline = '$deadline',
 													start_date = '$sdate',
 													tid = '$tid',
 													io = '$stats',
-													proposed_project ='$p_type' where project_id = '$id' ");
+													proposed_project ='$p_type' where project_id = '$id',
+													information = '$information'");
+
 	if($query ){
 		echo '<script>$("#suc_msg2").show("slidedown");
 		var delay = 1500;

@@ -64,9 +64,9 @@
           <div class="col-sm-8">
             <select class="form-control"  id="" name="status" type="text"  required>
             <option></option>
-            <option>Single</option>
-            <option>Married</option>
-            <option>Widow</option>
+            <option>Student</option>
+            <option>Teacher</option>
+            <option>Other</option>
             </select>
           </div>
         </div>
@@ -134,11 +134,12 @@
           <div class="col-sm-8">
            <select type="text" class="form-control input-sm" style="text-transform:capitalize" autocomplete="off" name="p_type" id="p_type" onchange="div_field()" required/>
           <option id="p_typ"></option>
-          <option value="1">Building</option>
-          <option value="2">House</option>
-          <option value="3">Highways</option>
-          <option value="4">Grand Stand</option>
-          <option value="5">Covered Court</option>
+          <option value="1">Art</option>
+          <option value="2">Gaming</option>
+          <option value="3">Business</option>
+          <option value="4">Academic</option>
+          <option value="5">FYP</option>
+          <option value="6">Other</option>
           </select>
           </div>
         </div>
@@ -146,20 +147,6 @@
           <label class="col-sm-4 control-label">Project Name:</label>
           <div class="col-sm-8">
             <input class="form-control" style="text-transform:capitalize" id="" name="pname" type="text"  required>
-          </div>
-        </div>
-   
-      <div class="form-group" id="form-login">
-          <label class="col-sm-4 control-label">Location:</label>
-          <div class="col-sm-8">
-            <textarea class="form-control" style="text-transform:capitalize" id="" name="location" type="text"  required></textarea>
-          </div>
-        </div> 
-
-      <div class="form-group" id="form-login">
-          <label class="col-sm-4 control-label">Cost:</label>
-          <div class="col-sm-6">
-            <input class="form-control" style="text-align:right" id="cc" name="cost" type="text" placeholder="Php.">
           </div>
         </div>
 
@@ -192,6 +179,13 @@
             </select>
           </div>
         </div>
+
+        <div class="form-group" id="form-login">
+          <label class="col-sm-4 control-label">Information:</label>
+          <div class="col-sm-8">
+            <textarea class="form-control" style="text-transform:capitalize" id="" name="information" type="text"  required></textarea>
+          </div>
+        </div> 
 
         
             

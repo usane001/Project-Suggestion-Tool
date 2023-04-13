@@ -43,18 +43,12 @@ $row= mysqli_fetch_assoc($emp_query);
 		<label class="control-label"><?php echo date("F d, Y",strtotime($row['deadline'])) ?></label>
 	</div>
 	<div class="row form-group">
-		<label class="control-label">Location:</label>
-		<label class="control-label"><?php echo $row['location'] ?></label>
-	</div>
-
-	<div class="row form-group">
-		<label class="control-label">Project Cost:</label>
-		<label class="control-label"><?php echo  $row['overall_cost'] . ' Php.' ?></label>
-	</div>
-	
-	<div class="row form-group">
 		<label class="control-label">Foreman:</label>
 		<label class="control-label"><?php echo $row['name'] ?></label>
+	</div>
+	<div class="row form-group">
+		<label class="control-label">Information:</label>
+		<label class="control-label"><?php echo $row['information'] ?></label>
 	</div>
 	</div>
 	<div class="col-md-6">
@@ -63,12 +57,18 @@ $row= mysqli_fetch_assoc($emp_query);
 		<label class="control-label">
 		<?php 
 		if($row['proposed_project'] == '1'){
-			echo 'Building';
+			echo 'Art';
 		}if($row['proposed_project'] == '2'){
-			echo 'House';
+			echo 'Gaming';
 		}elseif($row['proposed_project'] == '3'){
-			echo 'Highways';
-		}	
+			echo 'Business';
+		}elseif($row['proposed_project'] == '4'){
+        	echo 'Academic';
+        }elseif($row['proposed_project'] == '5'){
+        	echo 'FYP';
+        }elseif($row['proposed_project'] == '6'){
+		echo 'Other';
+        }
 		 ?></label>
 		
 	</div>
