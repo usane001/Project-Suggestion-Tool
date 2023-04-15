@@ -39,67 +39,53 @@ session_start();
 				</div>
 				<div class="panel-body">
 					 <div class="container-fluid">
-					 <form class="form-horizontal" method="POST" id="sign_up_form">
-									<div class="form-group" id="form-sign_up">
-									<div class="form-group" id="form-login">
-          <label class="col-sm-4 control-label">Last Name:</label>
-          <div class="col-sm-8">
-            <input class="form-control" style="text-transform:capitalize" id="" name="lname" type="text"  required>
-          </div>
-        </div>
+					 <form class="form-horizontal" method="POST" id="user_form">
+					 <div class="form-group" id="user_form">
+					 <p>Please select "New user" as a template in "Employee" to create a username and password to login into the website and then you can add and edit your details once logged in.</p>
+					 <label for="emp" class="control-label">Employee:</label>
+	 <select name="eid" id="emp" class="form-control chosen-select" data-placeholder="Select Employee">
+    <option value=""></option>
+      <?php
+    include 'includes/db.php';
    
-      <div class="form-group" id="form-login">
-          <label class="col-sm-4 control-label">First Name:</label>
-          <div class="col-sm-8">
-            <input class="form-control" style="text-transform:capitalize" id="" name="fname" type="text"  required>
-          </div>
-        </div> 
+      $query2=  mysqli_query($conn, "SELECT *,CONCAT(lastname,', ',firstname,' ') as name FROM employee where io = '1' and eid != '".$_SESSION['ID']."' order by name ");
+         while($row2 = mysqli_fetch_assoc($query2)) {  
+    ?>
+      <option value="<?php echo $row2['eid'] ?>"><?php echo date("Y",strtotime($row2['date_added'])).$row2['ecode']. ' | ' . ucwords($row2['name']) ?></option> 
+      <?php } ?>
+    </select>
+    </div>
+	<div class="form-group">
+    <label for="us" class="control-label">Username:</label>
+   <input type="text" class="form-control" id="us" name="user">
+    </div>
 
-      <div class="form-group" id="form-login">
-          <label class="col-sm-4 control-label">Gender:</label>
-          <div class="col-sm-4">
-            <select class="form-control"  name="gender" type="text"  required>
-            <option></option>
-            <option>Female</option>
-            <option>Male</option>
-            </select>
-          </div>
-        </div>
-        
-        <div class="form-group" id="form-login">
-          <label class="col-sm-4 control-label">Contact no.:</label>
-          <div class="col-sm-5">
-            <input class="form-control text-right"  id="" name="cn" type="text" maxlength="11"  required>
-          </div>
-        </div>
+    <div class="form-group">
+    <label for="pass" class="control-label">Password:</label>
+   <input type="password" class="form-control" id="pass" name="pass">
+    </div>
+ 
+    <div class="form-group">
+    <label for="u_type" class="control-label">User Type:</label>
+   <select type="text" class="form-control" id="u_type" name="u_type">
+   <option ></option>
+   <option value="1">Administrator</option>
+   <option value="2">Staff</option>
+   </select>
+    </div>
 
-        <div class="form-group" id="form-login">
-          <label class="col-sm-4 control-label">Status:</label>
-          <div class="col-sm-8">
-            <select class="form-control"  id="" name="status" type="text"  required>
-            <option></option>
-            <option>Single</option>
-            <option>Married</option>
-            <option>Widow</option>
-            </select>
-          </div>
-        </div>
+	<div class="form-group" id="msg">
+									<div class="col-sm-8 col-sm-offset-8">
+									<button type="submit" class="btn btn-info">Register</button>
+									<a href="index.php" class="btn btn-info">Login</a>
+									</form>
+									</div>
 
-        <div class="form-group" id="form-login">
-          <label class="col-sm-4 control-label">Position:</label>
-          <div class="col-sm-8">
-            <select class="form-control"  id="" name="position" type="text"  required>
-            <option></option>
-            <?php
-            include '../includes/db.php';
-              $pos_query = mysqli_query($conn,"SELECT * FROM position order by position ASC");
-              while($pos_row = mysqli_fetch_assoc($pos_query)){
-             ?>
-            <option style="text-transform:capitalize" value="<?php echo $pos_row['pid'] ?>"><?php echo $pos_row['position'] ?></option>
-            <?php } ?>
-            </select>
-          </div>
-        </div>
+									<div class="col-sm-11 md+2">
+										<div class="alert alert-success" id="correct"> Successfully Registered!</div>
+										<div class="alert alert-danger" id="error"> Error enter all details </div>
+									</div>
+									</div>
 									
 								</form>
 					 </div>         	
@@ -113,28 +99,28 @@ session_start();
 					jQuery(document).ready(function(){
 						$("#correct").hide();
 						$("#error").hide();
-						jQuery("#login_form").submit(function(e){
-								e.preventDefault();
+						jQuery("#user_form").submit(function(e){
+							e.preventDefault();
 								var formData = jQuery(this).serialize();
 								$.ajax({
 									type: "POST",
-									url: "includes/login.php",
+									url: "forms/add_forms.php?action=user",
 									data: formData,
 									success: function(html){
-									if(html=='true' )
-									{
+										if($("#user_form input[type=text]").val())
+										{
 										$('#error').hide();
 										$("#correct").slideDown();
 										var delay = 2000;
-										setTimeout(function(){	window.location = 'pages/index.php?page=home';   }, delay);  
+										setTimeout(function(){	window.location = 'index.php';   }, delay); 
 									}else{
-									$('#error').slideDown();	
+										$('#error').slideDown();
 										var delay = 2000;
-										setTimeout(function(){	$('#error').slideUp();  }, delay);  
+										setTimeout(function(){	$('#error').slideUp();  }, delay);
 									}
 									}
 								});
-									return false;
+								return false;
 						});
 						});
 						});
