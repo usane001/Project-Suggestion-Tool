@@ -19,7 +19,10 @@
     <!-- Custom Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>     
+   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'> 
+   
+
+
     <!-- am chart --> 
     <script type="text/javascript" src="../am_chart/amcharts.js"></script>
     <script type="text/javascript" src="../am_chart/pie.js"></script>
@@ -47,6 +50,7 @@
     <script src="../asset/js/bootstrap.min.js" type="text/javascript"></script>
 
     <script src="../assets/js/ie-emulation-modes-warning.js"></script> 
+    
 
     <script src="../chosen/chosen.jquery.js"></script>
   <link href="../chosen/chosen.css" rel="stylesheet" media="screen">

@@ -52,8 +52,8 @@
 <?php
 error_reporting(E_ALL ^ E_NOTICE);
 
-$page = isset($_GET['page']) && !empty($_GET['page']) ? $_GET['page'] : 'home';
-$pages = array('home','position','employee','employee_profile','division','project_list','project_detail','progress','update_progress','user_list','attendance','project_team','categories');
+$page = isset($_GET['page']) && !empty($_GET['page']) ? $_GET['page'] : 'Other1';
+$pages = array('Other1','home','position','employee','employee_profile','division','project_list','project_detail','progress','update_progress','user_list','attendance','project_team','categories');
 if (!empty($page)) {
     if(in_array($page,$pages)) {
         $page .= '.php';

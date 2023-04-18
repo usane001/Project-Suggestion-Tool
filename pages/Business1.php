@@ -16,7 +16,8 @@
 	<div class="panel panel-primary">
 		<div class="panel-body">
 			<?php include '../includes/db.php';
-			$query = mysqli_query($conn,"SELECT * FROM projects where io = '1' ");
+			$query = mysqli_query($conn,"SELECT * FROM projects where io = '1'");
+      $query = mysqli_query($conn,"SELECT * FROM projects where proposed_project = '3'");
 			while($row = mysqli_fetch_assoc($query)){
 				?>
 				<div class="col-sm-4 project-item">

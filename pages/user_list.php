@@ -37,7 +37,7 @@
       <tr>
 
         <td style="text-transform:capitalize"><?php echo $row['name'] ?></td>
-        <td style="text-transform:capitalize" class="text-center"><?php  if($row['user_type'] == '1'){ echo 'Administrator';}else{ echo 'Staff';} ?></td>
+        <td style="text-transform:capitalize" class="text-center"><?php  if($row['user_type'] == '1'){ echo 'Administrator';}else{ echo 'User';} ?></td>
         <td style="text-transform:capitalize" class="text-center"><center><a onclick="edit_user('<?php echo $id2 ?>')" ><i class="fa fa-edit"></i> Edit</a></center></td>
        </tr>
 
@@ -98,7 +98,7 @@
    <select type="text" class="form-control input-sm" id="u_type" name="u_type">
    <option ></option>
    <option value="1">Administrator</option>
-   <option value="2">Staff</option>
+   <option value="2">User</option>
    </select>
     </div>
     </div>

@@ -1,9 +1,9 @@
         <ul class="nav navbar-nav side-nav">
                     <li>
-                        <a href="index.php?Home=home"><i class="fa fa-fw fa-dashboard"><span class="hover"></i> Home</a>
+                        <a href="index.php?Home=home"><i class="fa fa-home fa-fw"><span class="hover"></i> Home</a>
                     </li>
                     <li>
-                        <a href="index.php?page=Browse_Categories"><i class="fa fa-fw fa-dashboard"></i> Browse Categories</a>
+                        <a href="index.php?page=categories&io=1"><i class="fa fa-book fa-fw"></i> Browse Categories</a>
                     </li>
                     <li class=''>
                         <a href="index.php?page=employee&io=1"><i class="fa fa-fw fa-users"></i> Employee List</a>

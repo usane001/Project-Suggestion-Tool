@@ -70,7 +70,7 @@ session_start();
    <select type="text" class="form-control" id="u_type" name="u_type">
    <option ></option>
    <option value="1">Administrator</option>
-   <option value="2">Staff</option>
+   <option value="2">User</option>
    </select>
     </div>
 
