@@ -5,7 +5,7 @@
              
                   <div class="modal-header"> 
                      <h4 class="modal-title" id='head'>
-                     <i class=""></i> New Employee
+                     <i class=""></i> New Member
                      </h4> 
                  
                   </div> 

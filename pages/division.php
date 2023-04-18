@@ -3,6 +3,7 @@
 	<h4>List of Project Divisions</h4>
 
 <hr style="border-bottom:1px solid black"></hr>
+<P>This is where you must create a new project division by clicking on "Add", The project divisions are like steps for your bar chart, to track each step of your progress.</P>
 </div>
 <div class="col-lg-8">
 	<div class="panel panel-default">

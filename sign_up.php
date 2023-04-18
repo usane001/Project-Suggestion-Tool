@@ -41,9 +41,9 @@ session_start();
 					 <div class="container-fluid">
 					 <form class="form-horizontal" method="POST" id="user_form">
 					 <div class="form-group" id="user_form">
-					 <p>Please select "New user" as a template in "Employee" to create a username and password to login into the website and then you can add and edit your details once logged in.</p>
-					 <label for="emp" class="control-label">Employee:</label>
-	 <select name="eid" id="emp" class="form-control chosen-select" data-placeholder="Select Employee">
+					 <p>Please select "New user" as a template in "Select User" to create a username and password to login into the website and then you can add and edit your details once logged in.</p>
+					 <label for="emp" class="control-label">User:</label>
+	 <select name="eid" id="emp" class="form-control chosen-select" data-placeholder="Select User">
     <option value=""></option>
       <?php
     include 'includes/db.php';

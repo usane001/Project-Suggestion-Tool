@@ -3,6 +3,7 @@
 	<h4>List of Projects</h4>
 
 <hr style="border-bottom:1px solid black"></hr>
+<P>To suggest a project you must fill in all details of the fields for the modal, you must select an appropriate division for the project, either select one below or add a new project division by clicking on "Maintainece" and then "Project Division".</P>
 </div>
 
 <div class="col-lg-12">

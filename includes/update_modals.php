@@ -175,7 +175,7 @@
              
                   <div class="modal-header"> 
                      <h4 class="modal-title" id='head'>
-                     <i class=""></i> Edit Employee
+                     <i class=""></i> Edit Member
                      </h4> 
                  
                   </div> 
@@ -459,7 +459,7 @@
     <div class="form-horizontal">
         
       <div class="form-group" id="form-login">
-          <label class="col-sm-4 control-label">Employee:</label>
+          <label class="col-sm-4 control-label">Member:</label>
           <div class="col-sm-8">
           <input id="id" value='<?php echo $_GET['id']; ?>' type='hidden'>
             <select class=" chosen-select" style="text-transform:capitalize" id="" name="text"  required>

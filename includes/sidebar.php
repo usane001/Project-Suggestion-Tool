@@ -6,7 +6,7 @@
                         <a href="index.php?page=categories&io=1"><i class="fa fa-book fa-fw"></i> Browse Categories</a>
                     </li>
                     <li class=''>
-                        <a href="index.php?page=employee&io=1"><i class="fa fa-fw fa-users"></i> Employee List</a>
+                        <a href="index.php?page=employee&io=1"><i class="fa fa-fw fa-users"></i> Members List</a>
                     </li>
                     <li>
                         <a href="index.php?page=project_list&io=1"><i class="fa fa-fw fa-files-o"></i> Suggest a Project</a>

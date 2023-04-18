@@ -12,6 +12,9 @@
 		background:#008aff8c;
 	}
 </style>
+<h2>Dashboard</h2>
+<hr style="border-bottom:1px solid black"></hr>
+<P>Welcome! to the Project suggestion website! Here you will be able to suggest and choose a wide range of topics. We project that is both Academic and non-academic. We have a multiple categories for you to search, depending on the projects you will like to have. Tracking feature is also useful to manange and check your projects.</P>
 <div class="col-lg-16" id="project-field">
 	<div class="panel panel-primary">
 		<div class="panel-body">
