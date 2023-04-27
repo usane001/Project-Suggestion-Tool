@@ -16,9 +16,9 @@ Features:
 
     -The page where the system user will be redirected by default after logging in.
     
--members List Page
+-Members List Page
 
-    -The page where all compny's members are listed and managed.
+    -The page where all members are listed and managed.
     
 -Position Page
 
